@@ -29,17 +29,8 @@ function indent() {
   esac
 }
 
-APT_CACHE_DIR="$CACHE_DIR/apt/cache"
-APT_STATE_DIR="$CACHE_DIR/apt/state"
-APT_SOURCES_LIST="$BUILD_DIR/sources.list"
-
-mkdir -p "$APT_CACHE_DIR/archives/partial"
-mkdir -p "$APT_STATE_DIR/lists/partial"
-
-APT_OPTIONS="-o dir::cache=$APT_CACHE_DIR -o dir::state=$APT_STATE_DIR -o dir::etc::sourcelist=$APT_SOURCES_LIST"
-
 topic "Downloading waveform"
-wget https://github.com/andrewrk/waveform/archive/master.zip
+wget https://github.com/tspecht/waveform/archive/master.zip
 
 topic "Unpacking waveform and compiling"
 unzip master.zip
