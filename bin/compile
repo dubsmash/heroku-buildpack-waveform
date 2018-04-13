@@ -7,7 +7,7 @@ indent() {
 echo "-----> Install waveform"
 BUILD_DIR=$1
 VENDOR_DIR="vendor"
-DOWNLOAD_URL="https://github.com/andrewrk/waveform/tarball/2.0.0"
+DOWNLOAD_URL="https://s3-eu-west-1.amazonaws.com/dubsmash-heroku-binaries/waveform.tar.gz"
 
 echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
 
