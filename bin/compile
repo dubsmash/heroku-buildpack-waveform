@@ -40,10 +40,10 @@ unzip master.zip
 cd waveform-master
 make
 
-topic "Writing profile script"
-mkdir -p $BUILD_DIR/.profile.d
-cat <<EOF >$BUILD_DIR/.profile.d/waveform.sh
-export PATH="$PATH:\$HOME/waveform-master"
-EOF
+# topic "Writing profile script"
+# mkdir -p $BUILD_DIR/.profile.d
+# cat <<EOF >$BUILD_DIR/.profile.d/waveform.sh
+# export PATH="$PATH:\$HOME/waveform-master"
+# EOF
 
-export PATH="$PATH:\$HOME/waveform-master"
+# export PATH="$PATH:\$HOME/waveform-master"
