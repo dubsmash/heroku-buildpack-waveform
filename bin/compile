@@ -39,7 +39,8 @@ topic "Downloading waveform"
 wget https://github.com/tspecht/waveform/archive/master.zip
 
 topic "Unpacking waveform and compiling"
-unzip master.zip -d waveform
+unzip master.zip
+mv waveform-master waveform
 cd waveform
 make
 
