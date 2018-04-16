@@ -29,6 +29,9 @@ function indent() {
   esac
 }
 
+topic "Fixing LD_LIBRARY_PATH for libGL.so"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib/libGL.so.1"
+
 topic "Downloading waveform"
 wget https://github.com/tspecht/waveform/archive/master.zip
 
