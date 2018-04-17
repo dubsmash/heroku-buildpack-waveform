@@ -50,6 +50,9 @@ mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:$HOME/vendor/waveform"' >> $PROFILE_PATH
 echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/vendor/waveform"' >> $PROFILE_PATH
 
+topic "Exporting shared libraries"
+export LD_LIBRARY_PATH=$HOME/.apt/usr/lib/x86_64-linux-gnu/mesa:$LD_LIBRARY_PATH
+
 # topic "Writing profile script"
 # mkdir -p $BUILD_DIR/.profile.d
 # cat <<EOF >$BUILD_DIR/.profile.d/waveform.sh
