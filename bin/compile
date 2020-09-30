@@ -35,9 +35,6 @@ cd $BUILD_DIR
 mkdir -p $VENDOR_DIR
 cd $VENDOR_DIR
 
-topic "Installing compilation utilities"
-apt-get install gcc
-
 topic "Downloading waveform"
 wget https://github.com/tspecht/waveform/archive/master.zip
 
@@ -52,9 +49,6 @@ PROFILE_PATH="$BUILD_DIR/.profile.d/waveform.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:$HOME/vendor/waveform"' >> $PROFILE_PATH
 echo 'export LD_LIBRARY_PATH="$HOME/.apt/usr/lib/x86_64-linux-gnu/mesa:$HOME/.apt/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH:$HOME/vendor/waveform"' >> $PROFILE_PATH
-
-topic "Cleaning up build environment"
-apt-get --purge remove gcc
 
 # topic "Writing profile script"
 # mkdir -p $BUILD_DIR/.profile.d
